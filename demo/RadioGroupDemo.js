@@ -1,7 +1,5 @@
-//import RadioGroup from '../src';
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-// import { Ra } from '../src/RadioGroup.js';
 import {RadioGroup,Radio} from '../src/RadioGroup.js'
 
 
