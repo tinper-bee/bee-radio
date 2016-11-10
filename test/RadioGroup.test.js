@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow, mount, render} from 'enzyme';
 import {expect} from 'chai';
-import {RadioGroup,Radio} from '../src/RadioGroup.js';
+import RadioGroup from '../src/RadioGroup.js';
 import App from '../demo/RadioGroupDemo.js'
 
 
@@ -14,7 +14,7 @@ describe('radioGroup should be exist', function() {
 			console.log("1");
 
 		}
-		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <Radio value="1" /><Radio vlaue="2" /></RadioGroup>);
+		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <RadioGroup.Radio value="1" /><RadioGroup.Radio vlaue="2" /></RadioGroup>);
 		
 		expect(radioGroup.find('.is-checked').find('input').prop('value')).to.equal("1");
 		
@@ -30,7 +30,7 @@ describe('colors test', function() {
 			console.log("1");
 
 		}
-		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <Radio colors="warning" value="1" /><Radio vlaue="2" /></RadioGroup>);
+		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <RadioGroup.Radio colors="warning" value="1" /><RadioGroup.Radio vlaue="2" /></RadioGroup>);
 		
 		console.log(radioGroup.find('.u-radio').first());
 
@@ -43,7 +43,7 @@ describe('colors test', function() {
 			console.log("1");
 
 		}
-		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <Radio colors="primary" value="1" /><Radio vlaue="2" /></RadioGroup>);
+		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <RadioGroup.Radio colors="primary" value="1" /><RadioGroup.Radio vlaue="2" /></RadioGroup>);
 		
 
 		expect(radioGroup.find('.u-radio').first().hasClass('u-radio-primary')).to.equal(true);
@@ -55,7 +55,7 @@ describe('colors test', function() {
 			console.log("1");
 
 		}
-		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <Radio colors="success" value="1" /><Radio vlaue="2" /></RadioGroup>);
+		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <RadioGroup.Radio colors="success" value="1" /><RadioGroup.Radio vlaue="2" /></RadioGroup>);
 		
 
 		expect(radioGroup.find('.u-radio').first().hasClass('u-radio-success')).to.equal(true);
@@ -67,7 +67,7 @@ describe('colors test', function() {
 			console.log("1");
 
 		}
-		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <Radio colors="info" value="1" /><Radio vlaue="2" /></RadioGroup>);
+		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <RadioGroup.Radio colors="info" value="1" /><RadioGroup.Radio vlaue="2" /></RadioGroup>);
 		
 
 		expect(radioGroup.find('.u-radio').first().hasClass('u-radio-info')).to.equal(true);
@@ -79,7 +79,7 @@ describe('colors test', function() {
 			console.log("1");
 
 		}
-		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <Radio colors="danger" value="1" /><Radio vlaue="2" /></RadioGroup>);
+		let radioGroup = mount(<RadioGroup selectedValue="1" onChange={handerChange}> <RadioGroup.Radio colors="danger" value="1" /><RadioGroup.Radio vlaue="2" /></RadioGroup>);
 		
 
 		expect(radioGroup.find('.u-radio').first().hasClass('u-radio-danger')).to.equal(true);

@@ -17,7 +17,7 @@ npm install --save bee-radio-group
 ```
 组件调用
 ```js
-import { RadioGroup,Radio} from 'bee-radio-group';
+import RadioGroup from 'bee-radio-group';
 
 const RadioApp = React.createClass({
   getInitialState() {
@@ -35,13 +35,13 @@ const RadioApp = React.createClass({
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange}>
         <label>
-          <Radio colors="warning" value="apple" >apple</Radio>
+          <RadioGroup.Radio colors="warning" value="apple" >apple</RadioGroup.Radio>
         </label>
         <label>
-          <Radio value="orange" >Orange</Radio>
+          <RadioGroup.Radio value="orange" >Orange</RadioGroup.Radio>
         </label>
         <label>
-          <Radio value="watermelon" >Watermelon</Radio>
+          <RadioGroup.Radio value="watermelon" >Watermelon</RadioGroup.Radio>
         </label>
       </RadioGroup>
     );
