@@ -107,7 +107,7 @@ describe('App test', function() {
 	})
 	it('watermelon should be selected', function() {
 		let app = mount(<App />);
-
+		
 		app.find('.u-radio').last().simulate('click');
 
 		expect(app.state('selectedValue')).to.equal("watermelon");

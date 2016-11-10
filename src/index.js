@@ -1,2 +1,2 @@
-import Ra from './RadioGroup.js';
-export default Ra;
+import RadioGroup from './RadioGroup.js';
+export default RadioGroup;

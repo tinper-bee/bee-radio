@@ -1,144 +1,72 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
+import Radio from './Radio'
 
-export const Radio = React.createClass({
-
-  propTypes: {
-  	/**
-	  * radio 颜色 样式
-	  */
-    colors: React.PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger','primary']),
-    /**
-	  * radio 是否可用
-	  */
- 	disabled: React.PropTypes.bool
-  },
+const propTypes = {
+  name: PropTypes.string,
   /**
-   * 建立与RadioGroup通信
+   * 选中的值
    */
-  contextTypes: {
-    radioGroup: React.PropTypes.object
-  },
+  selectedValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
+  /**
+  * 暴露给用户，且与子Radio通信的方法
+  */
+  onChange: PropTypes.func,
 
-  render: function() {
-    /**
-     * 通过context通信，获取父级的属性
-     * name:radio的组名
-     * selectedValue:被选中radio的值
-     * 暴露在外的change方法
-     */
-    const {name, selectedValue, onChange} = this.context.radioGroup;
-    /**
-     * 自身的属性
-     */
-    const {
-	      disabled,
-	      colors,
-	      className,
-	      children,
-	      ...others
-    	} = this.props;
+  children: PropTypes.node.isRequired,
 
-    const optional = {};
-    const clsPrefix = 'u-radio';
-    /**
-     * 若父级selectedValue与本身的value值相同，则改radio被选中
-     */
-    if(selectedValue !== undefined) {
-      optional.checked = (this.props.value === selectedValue);
-    }
+  Component: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.object,
+  ])
+};
 
-     const classes = {
-    	'u-radio':true,
-    	'is-checked':optional.checked,   
-    	disabled
-    };
+const defaultProps = {
+  Component: 'div'
+};
 
-    if (colors) {
-        classes[`${clsPrefix}-${colors}`] = true;
-    }
+/**
+ * 与子Radio通信
+ */
+const childContextTypes = {
+  radioGroup: React.PropTypes.object
+}
 
-    if (colors) {
-        classes[`${clsPrefix}-${colors}`] = true;
-    }
+class RadioGroup extends React.Component {
 
-    
-    /**
-     * radio本身的onClick方法触发外面的change,将本身的value传输到外层
-     */
-    if(typeof onChange === 'function') {
-      optional.onClick = onChange.bind(null, this.props.value);
-    }
-
-    const input = (
-      	<input
-        {...others}
-        type="radio"
-        name={name}
-        disabled={this.props.disabled}
-        />
-    );
-     return (
-        <label {...optional} className={classNames(className, classes)}>
-          {input}
-          <label className="u-radio-label">{children}</label>
-        </label>
-    );
+  constructor(props, context) {
+    super(props, context);
     
   }
-});
-
-export const RadioGroup = React.createClass({
-
-  propTypes: {
-    name: PropTypes.string,
-    /**
-	  * 选中的值
-	  */
-    selectedValue: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-      PropTypes.bool,
-    ]),
-    /**
-	  * 暴露给用户，且与子Radio通信的方法
-	  */
-    onChange: PropTypes.func,
-
-    children: PropTypes.node.isRequired,
-
-    Component: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.func,
-      PropTypes.object,
-    ])
-  },
-
-  getDefaultProps: function() {
-    return {
-      Component: "div"
-    };
-  },
+  
+  
   /**
-   * 与子Radio通信
-   */
-  childContextTypes: {
-    radioGroup: React.PropTypes.object
-  },
-  /**
-  	* 一旦外层change方法触发本身props发生改变，则调用getChildContext更新与子Radio的通信信息（radioGroup）
-  	*/
-  getChildContext: function() {
+    * 一旦外层change方法触发本身props发生改变，则调用getChildContext更新与子Radio的通信信息（radioGroup）
+    */
+
+  getChildContext() {
     const {name, selectedValue, onChange} = this.props;
     return {
       radioGroup: {
         name, selectedValue, onChange
       }
     }
-  },
-
-  render: function() {
-    const {Component, name, selectedValue, onChange, children, ...rest} = this.props;
-    return <Component {...rest}>{children}</Component>;
   }
-});
+
+  render () {
+    const {Component, name, selectedValue, onChange, children, ...others} = this.props;
+    
+    return <Component {...others}>{children}</Component>;
+  }
+}
+
+RadioGroup.childContextTypes = childContextTypes;
+RadioGroup.propTypes = propTypes;
+RadioGroup.defaultProps = defaultProps;
+RadioGroup.Radio = Radio;
+export default RadioGroup;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import {RadioGroup,Radio} from '../src/RadioGroup.js'
+import RadioGroup from '../src/RadioGroup.js'
 
 
  const App = React.createClass({
@@ -18,15 +18,13 @@ import {RadioGroup,Radio} from '../src/RadioGroup.js'
         name="fruit"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange}>
-        <label>
-          <Radio colors="warning" value="apple" >apple</Radio>
-        </label>
-        <label>
-          <Radio value="orange" >Orange</Radio>
-        </label>
-        <label>
-          <Radio value="watermelon" >Watermelon</Radio>
-        </label>
+
+          <RadioGroup.Radio colors="warning" value="apple" >apple</RadioGroup.Radio>
+
+          <RadioGroup.Radio value="orange" >Orange</RadioGroup.Radio>
+
+          <RadioGroup.Radio value="watermelon" >Watermelon</RadioGroup.Radio>
+
       </RadioGroup>
     );
   }
