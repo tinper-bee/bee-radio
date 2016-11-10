@@ -66,7 +66,7 @@ import "./node_modules/build/bee-radio-group.css"
 
 ## API
 
-## Radio
+## RadioGroup.Radio
 |参数|说明|类型|默认值|
 |---|----|---|------|
 |color|one of: `primary` `success` `info` `error`  `warning` `dark`|string|''|
