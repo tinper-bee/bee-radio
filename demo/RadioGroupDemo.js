@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import RadioGroup from '../src'
 
 
- const App = React.createClass({
+const App = React.createClass({
   getInitialState() {
     return {selectedValue: 'apple'};
   },
