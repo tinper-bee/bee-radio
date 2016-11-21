@@ -1,11 +1,11 @@
 # bee-radio-group
 [![npm version](https://img.shields.io/npm/v/bee-radio-group.svg)](https://www.npmjs.com/package/bee-radio-group)
 [![Build Status](https://img.shields.io/travis/tinper-bee/generator-tinper-bee/master.svg)](https://travis-ci.org/tinper-bee/bee-radio-group)
-[![devDependency Status](https://img.shields.io/david/dev/tinper-bee/bee-radio-group.svg)](https://david-dm.org/tinper-bee/bee-radio-group#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/github/tinper-bee/bee-radio-group/badge.svg?branch=master)](https://coveralls.io/github/tinper-bee/bee-radio-group?branch=master)
 
 单选框组合
 
-包含为RadioGroup与Radio两个子组件。
+RadioGroup将Radio集成为自己的子组件。故API需注意。
 
 ## 使用
 使用单独的bee-radio-group包

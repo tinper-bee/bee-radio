@@ -2,7 +2,7 @@ import App from './RadioGroupDemo';
 import ReactDOM from 'react-dom';
 import RadioGroup from '../src';
 
-const Demo1 = React.createClass({
+const Demo2 = React.createClass({
   getInitialState() {
     return {selectedValue: 'apple'};
   },
@@ -29,7 +29,7 @@ const Demo1 = React.createClass({
   }
 });
 
-const Demo2 = React.createClass({
+const Demo1 = React.createClass({
   getInitialState() {
     return {selectedValue: 'apple'};
   },
@@ -60,5 +60,5 @@ const Demo2 = React.createClass({
   }
 });
 
-ReactDOM.render(<Demo1 />, document.getElementById('ReactRadioGroupDemo1'));
 ReactDOM.render(<Demo2 />, document.getElementById('ReactRadioGroupDemo2'));
+ReactDOM.render(<Demo1 />, document.getElementById('ReactRadioGroupDemo1'));
