@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import classnames from 'classnames';
 import React from 'react';
 
 const propTypes = {
@@ -6,7 +6,7 @@ const propTypes = {
     * radio 颜色 样式
     */
   colors: React.PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger','primary']),
-    /**
+  /**
     * radio 是否可用
     */
   disabled: React.PropTypes.bool
@@ -14,7 +14,8 @@ const propTypes = {
 
 const defaultProps = {
   active: false,
-  disabled: false
+  disabled: false,
+  clsPrefix: 'u-radio'
 };
 
 /**
@@ -24,7 +25,6 @@ const contextTypes = {
     radioGroup: React.PropTypes.object
 }
 
-const clsPrefix = "u-radio";
 
 class Radio extends React.Component {
   constructor(props, context) {
@@ -57,6 +57,7 @@ class Radio extends React.Component {
           colors,
           className,
           children,
+          clsPrefix,
           ...others
         } = this.props;
 
@@ -68,8 +69,7 @@ class Radio extends React.Component {
         optional.checked = (this.props.value === selectedValue);
       }
 
-       const classes = {
-        'u-radio':true,
+      const classes = {
         'is-checked':optional.checked,   
         disabled
       };
@@ -77,7 +77,7 @@ class Radio extends React.Component {
       if (colors) {
           classes[`${clsPrefix}-${colors}`] = true;
       }
-
+      let classNames = classnames(clsPrefix,classes);
       const input = (
           <input
           {...others}
@@ -87,9 +87,9 @@ class Radio extends React.Component {
           />
       );
        return (
-          <label onClick = {this.handleClick} className={classNames(className, classes)}>
+          <label onClick = {this.handleClick} className={classnames(className, classNames)}>
             {input}
-            <label className="u-radio-label">{children}</label>
+            <label className={clsPrefix+'-label'}>{children}</label>
           </label>
       );
 

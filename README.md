@@ -1,6 +1,6 @@
 # bee-radio-group
 [![npm version](https://img.shields.io/npm/v/bee-radio-group.svg)](https://www.npmjs.com/package/bee-radio-group)
-[![Build Status](https://img.shields.io/travis/tinper-bee/generator-tinper-bee/master.svg)](https://travis-ci.org/tinper-bee/bee-radio-group)
+[![Build Status](https://img.shields.io/travis/tinper-bee/bee-radio-group/master.svg)](https://travis-ci.org/tinper-bee/bee-radio-group)
 [![Coverage Status](https://coveralls.io/repos/github/tinper-bee/bee-radio-group/badge.svg?branch=master)](https://coveralls.io/github/tinper-bee/bee-radio-group?branch=master)
 
 单选框组合
@@ -67,6 +67,7 @@ import "./node_modules/build/bee-radio-group.css"
 ## API
 
 ## RadioGroup.Radio
+
 |参数|说明|类型|默认值|
 |---|----|---|------|
 |color|one of: `primary` `success` `info` `error`  `warning` `dark`|string|''|

@@ -32,14 +32,15 @@ var propTypes = {
     */
   colors: _react2["default"].PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger', 'primary']),
   /**
-  * radio 是否可用
-  */
+    * radio 是否可用
+    */
   disabled: _react2["default"].PropTypes.bool
 };
 
 var defaultProps = {
   active: false,
-  disabled: false
+  disabled: false,
+  clsPrefix: 'u-radio'
 };
 
 /**
@@ -48,8 +49,6 @@ var defaultProps = {
 var contextTypes = {
   radioGroup: _react2["default"].PropTypes.object
 };
-
-var clsPrefix = "u-radio";
 
 var Radio = function (_React$Component) {
   _inherits(Radio, _React$Component);
@@ -90,8 +89,9 @@ var Radio = function (_React$Component) {
     var colors = _props.colors;
     var className = _props.className;
     var children = _props.children;
+    var clsPrefix = _props.clsPrefix;
 
-    var others = _objectWithoutProperties(_props, ['disabled', 'colors', 'className', 'children']);
+    var others = _objectWithoutProperties(_props, ['disabled', 'colors', 'className', 'children', 'clsPrefix']);
 
     var optional = {};
     /**
@@ -102,7 +102,6 @@ var Radio = function (_React$Component) {
     }
 
     var classes = {
-      'u-radio': true,
       'is-checked': optional.checked,
       disabled: disabled
     };
@@ -110,7 +109,7 @@ var Radio = function (_React$Component) {
     if (colors) {
       classes[clsPrefix + '-' + colors] = true;
     }
-
+    var classNames = (0, _classnames2["default"])(clsPrefix, classes);
     var input = _react2["default"].createElement('input', _extends({}, others, {
       type: 'radio',
       name: name,
@@ -118,11 +117,11 @@ var Radio = function (_React$Component) {
     }));
     return _react2["default"].createElement(
       'label',
-      { onClick: this.handleClick, className: (0, _classnames2["default"])(className, classes) },
+      { onClick: this.handleClick, className: (0, _classnames2["default"])(className, classNames) },
       input,
       _react2["default"].createElement(
         'label',
-        { className: 'u-radio-label' },
+        { className: clsPrefix + '-label' },
         children
       )
     );
