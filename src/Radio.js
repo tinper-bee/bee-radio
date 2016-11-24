@@ -61,7 +61,7 @@ class Radio extends React.Component {
           ...others
         } = this.props;
 
-      const optional = {};
+      let optional = {};
       /**
        * 若父级selectedValue与本身的value值相同，则改radio被选中
        */
@@ -69,7 +69,7 @@ class Radio extends React.Component {
         optional.checked = (this.props.value === selectedValue);
       }
 
-      const classes = {
+      let classes = {
         'is-checked':optional.checked,   
         disabled
       };
