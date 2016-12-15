@@ -12,40 +12,7 @@ const CARET = <i className="uf uf-chevronarrowdown"></i>;
 const CARETUP = <i className="uf uf-chevronarrowup"></i>;
 
 
-/**
- * @title 多颜色`Checkbox`
- * @description `colors`参数控制背景色
- */
-class Demo2 extends Component{
-  constructor(props) {
-  	super(props);
-  	this.state = {
-    	selectedValue: 'apple'
-    };
-  }
-
-  handleChange(value) {
-    this.setState({selectedValue: value});
-  }
-
-  render() {
-    return (
-      <RadioGroup
-        name="fruit"
-        selectedValue={this.state.selectedValue}
-        onChange={this.handleChange.bind(this)}>
-
-          <RadioGroup.Radio value="apple" >apple</RadioGroup.Radio>
-
-          <RadioGroup.Radio value="orange" >Orange</RadioGroup.Radio>
-
-          <RadioGroup.Radio disabled value="watermelon" >Watermelon</RadioGroup.Radio>
-
-      </RadioGroup>
-    )
-  }
-};var DemoArray = [{"example":<Demo1 />,"title":" 多颜色`Checkbox`","code":"/**\n * @title 多颜色`Checkbox`\n * @description `colors`参数控制背景色\n */\nclass Demo2 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'apple'\n    };\n  }\n\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n\n  render() {\n    return (\n      <RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <RadioGroup.Radio value=\"apple\" >apple</RadioGroup.Radio>\n\n          <RadioGroup.Radio value=\"orange\" >Orange</RadioGroup.Radio>\n\n          <RadioGroup.Radio disabled value=\"watermelon\" >Watermelon</RadioGroup.Radio>\n\n      </RadioGroup>\n    )\n  }\n};","desc":" `colors`参数控制背景色"}]
-
+{demolist}
 
 class Demo extends Component {
     constructor(props){
