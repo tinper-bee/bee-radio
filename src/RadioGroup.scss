@@ -2,6 +2,7 @@
 @import "../node_modules/tinper-bee-core/scss/minxin-mixins";
 
 .u-radio {
+	line-height: 22px;
 	&.disabled .u-radio-label{
 		cursor: not-allowed;
 		opacity: 0.5;

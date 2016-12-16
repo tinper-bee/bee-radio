@@ -13,21 +13,19 @@ const CARETUP = <i className="uf uf-chevronarrowup"></i>;
 
 
 /**
- * @title 多颜色`Checkbox`
+ * @title Radio
  * @description `colors`参数控制背景色
  */
-class Demo2 extends Component{
+class Demo1 extends Component{
   constructor(props) {
   	super(props);
   	this.state = {
     	selectedValue: 'apple'
     };
   }
-
   handleChange(value) {
     this.setState({selectedValue: value});
   }
-
   render() {
     return (
       <RadioGroup
@@ -44,7 +42,7 @@ class Demo2 extends Component{
       </RadioGroup>
     )
   }
-};var DemoArray = [{"example":<Demo1 />,"title":" 多颜色`Checkbox`","code":"/**\n * @title 多颜色`Checkbox`\n * @description `colors`参数控制背景色\n */\nclass Demo2 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'apple'\n    };\n  }\n\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n\n  render() {\n    return (\n      <RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <RadioGroup.Radio value=\"apple\" >apple</RadioGroup.Radio>\n\n          <RadioGroup.Radio value=\"orange\" >Orange</RadioGroup.Radio>\n\n          <RadioGroup.Radio disabled value=\"watermelon\" >Watermelon</RadioGroup.Radio>\n\n      </RadioGroup>\n    )\n  }\n};","desc":" `colors`参数控制背景色"}]
+};var DemoArray = [{"example":<Demo1 />,"title":" Radio","code":"/**\n * @title Radio\n * @description `colors`参数控制背景色\n */\nclass Demo1 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'apple'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <RadioGroup.Radio value=\"apple\" >apple</RadioGroup.Radio>\n\n          <RadioGroup.Radio value=\"orange\" >Orange</RadioGroup.Radio>\n\n          <RadioGroup.Radio disabled value=\"watermelon\" >Watermelon</RadioGroup.Radio>\n\n      </RadioGroup>\n    )\n  }\n};","desc":" `colors`参数控制背景色"}]
 
 
 class Demo extends Component {
