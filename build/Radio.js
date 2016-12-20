@@ -77,21 +77,20 @@ var Radio = function (_React$Component) {
   };
 
   Radio.prototype.render = function render() {
-    var _context$radioGroup = this.context.radioGroup;
-    var name = _context$radioGroup.name;
-    var selectedValue = _context$radioGroup.selectedValue;
+    var _context$radioGroup = this.context.radioGroup,
+        name = _context$radioGroup.name,
+        selectedValue = _context$radioGroup.selectedValue;
     /**
      * 自身的属性
      */
 
-    var _props = this.props;
-    var disabled = _props.disabled;
-    var colors = _props.colors;
-    var className = _props.className;
-    var children = _props.children;
-    var clsPrefix = _props.clsPrefix;
-
-    var others = _objectWithoutProperties(_props, ['disabled', 'colors', 'className', 'children', 'clsPrefix']);
+    var _props = this.props,
+        disabled = _props.disabled,
+        colors = _props.colors,
+        className = _props.className,
+        children = _props.children,
+        clsPrefix = _props.clsPrefix,
+        others = _objectWithoutProperties(_props, ['disabled', 'colors', 'className', 'children', 'clsPrefix']);
 
     var optional = {};
     /**

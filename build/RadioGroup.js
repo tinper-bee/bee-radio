@@ -69,10 +69,10 @@ var RadioGroup = function (_React$Component) {
     */
 
   RadioGroup.prototype.getChildContext = function getChildContext() {
-    var _props = this.props;
-    var name = _props.name;
-    var selectedValue = _props.selectedValue;
-    var onChange = _props.onChange;
+    var _props = this.props,
+        name = _props.name,
+        selectedValue = _props.selectedValue,
+        onChange = _props.onChange;
 
     return {
       radioGroup: {
@@ -82,14 +82,13 @@ var RadioGroup = function (_React$Component) {
   };
 
   RadioGroup.prototype.render = function render() {
-    var _props2 = this.props;
-    var Component = _props2.Component;
-    var name = _props2.name;
-    var selectedValue = _props2.selectedValue;
-    var onChange = _props2.onChange;
-    var children = _props2.children;
-
-    var others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children']);
+    var _props2 = this.props,
+        Component = _props2.Component,
+        name = _props2.name,
+        selectedValue = _props2.selectedValue,
+        onChange = _props2.onChange,
+        children = _props2.children,
+        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children']);
 
     return _react2["default"].createElement(
       Component,
