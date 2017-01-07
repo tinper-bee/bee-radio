@@ -1,2 +1,8 @@
 import RadioGroup from './RadioGroup.js';
-export default RadioGroup;
+import Radio from './Radio.js';
+import RadioButton from './RadioButton.js';
+
+Radio.RadioGroup = RadioGroup;
+Radio.RadioButton = RadioButton;
+
+export default Radio;

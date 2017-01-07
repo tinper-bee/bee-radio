@@ -7,6 +7,10 @@ const propTypes = {
     */
   colors: React.PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger','primary']),
   /**
+    * radio 大小
+    */
+  size: React.PropTypes.oneOf(['lg','sm']),
+  /**
     * radio 是否可用
     */
   disabled: React.PropTypes.bool
@@ -48,7 +52,7 @@ class Radio extends React.Component {
   }
  
   render() {
-      const {name, selectedValue} = this.context.radioGroup;
+      const {name, selectedValue,size} = this.context.radioGroup;
       /**
        * 自身的属性
        */
@@ -70,12 +74,15 @@ class Radio extends React.Component {
       }
 
       let classes = {
-        'is-checked':optional.checked,   
+        'is-checked':optional.checked && !disabled,   
         disabled
       };
 
       if (colors) {
           classes[`${clsPrefix}-${colors}`] = true;
+      }
+      if (size) {
+          classes[`${clsPrefix}-${size}`] = true;
       }
       let classNames = classnames(clsPrefix,classes);
       const input = (

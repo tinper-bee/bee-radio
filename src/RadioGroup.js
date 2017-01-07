@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
-import Radio from './Radio'
 
 const propTypes = {
   name: PropTypes.string,
@@ -16,6 +15,10 @@ const propTypes = {
   * 暴露给用户，且与子Radio通信的方法
   */
   onChange: PropTypes.func,
+  /**
+    * radio 大小
+    */
+  size: React.PropTypes.oneOf(['lg','sm']),
 
   children: PropTypes.node.isRequired,
 
@@ -50,16 +53,16 @@ class RadioGroup extends React.Component {
     */
 
   getChildContext() {
-    const {name, selectedValue, onChange} = this.props;
+    const {name, selectedValue, onChange,size} = this.props;
     return {
       radioGroup: {
-        name, selectedValue, onChange
+        name, selectedValue, onChange,size
       }
     }
   }
 
   render () {
-    const {Component, name, selectedValue, onChange, children, ...others} = this.props;
+    const {Component, name, selectedValue, onChange, children,size, ...others} = this.props;
     
     return <Component {...others}>{children}</Component>;
   }
@@ -68,5 +71,4 @@ class RadioGroup extends React.Component {
 RadioGroup.childContextTypes = childContextTypes;
 RadioGroup.propTypes = propTypes;
 RadioGroup.defaultProps = defaultProps;
-RadioGroup.Radio = Radio;
 export default RadioGroup;

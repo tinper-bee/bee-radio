@@ -4,7 +4,7 @@ import { Panel } from 'bee-panel';
 import Button from 'bee-button';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import RadioGroup from '../src';
+import Radio from '../src';
 
 
 const CARET = <i className="uf uf-chevronarrowdown"></i>;
@@ -28,21 +28,54 @@ class Demo1 extends Component{
   }
   render() {
     return (
-      <RadioGroup
+      <Radio.RadioGroup
         name="fruit"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange.bind(this)}>
 
-          <RadioGroup.Radio value="apple" >apple</RadioGroup.Radio>
+          <Radio value="apple" >apple</Radio>
 
-          <RadioGroup.Radio value="orange" >Orange</RadioGroup.Radio>
+          <Radio value="orange" >Orange</Radio>
 
-          <RadioGroup.Radio disabled value="watermelon" >Watermelon</RadioGroup.Radio>
+          <Radio disabled value="watermelon" >Watermelon</Radio>
 
-      </RadioGroup>
+      </Radio.RadioGroup>
     )
   }
-};var DemoArray = [{"example":<Demo1 />,"title":" Radio","code":"/**\n * @title Radio\n * @description `colors`参数控制背景色\n */\nclass Demo1 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'apple'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <RadioGroup.Radio value=\"apple\" >apple</RadioGroup.Radio>\n\n          <RadioGroup.Radio value=\"orange\" >Orange</RadioGroup.Radio>\n\n          <RadioGroup.Radio disabled value=\"watermelon\" >Watermelon</RadioGroup.Radio>\n\n      </RadioGroup>\n    )\n  }\n};","desc":" `colors`参数控制背景色"}]
+};/**
+ * @title RadioButton
+ * @description `colors`参数控制背景色
+ */
+class Demo2 extends Component{
+  constructor(props) {
+  	super(props);
+  	this.state = {
+    	selectedValue: 'banana'
+    };
+  }
+  handleChange(value) {
+    this.setState({selectedValue: value});
+  }
+  render() {
+    return (
+
+      <Radio.RadioGroup
+        name="fruit"
+        size="lg"
+        selectedValue={this.state.selectedValue}
+        onChange={this.handleChange.bind(this)}>
+
+          <Radio.RadioButton value="apple">apple</Radio.RadioButton>
+
+          <Radio.RadioButton value="banana">banana</Radio.RadioButton>
+
+          <Radio.RadioButton  value="orange">orange</Radio.RadioButton>
+
+      </Radio.RadioGroup>
+
+    )
+  }
+};var DemoArray = [{"example":<Demo1 />,"title":" Radio","code":"/**\n * @title Radio\n * @description `colors`参数控制背景色\n */\nclass Demo1 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'apple'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio value=\"apple\" >apple</Radio>\n\n          <Radio value=\"orange\" >Orange</Radio>\n\n          <Radio disabled value=\"watermelon\" >Watermelon</Radio>\n\n      </Radio.RadioGroup>\n    )\n  }\n};","desc":" `colors`参数控制背景色"},{"example":<Demo2 />,"title":" RadioButton","code":"/**\n * @title RadioButton\n * @description `colors`参数控制背景色\n */\nclass Demo2 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'banana'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n\n      <Radio.RadioGroup\n        name=\"fruit\"\n        size=\"lg\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio.RadioButton value=\"apple\">apple</Radio.RadioButton>\n\n          <Radio.RadioButton value=\"banana\">banana</Radio.RadioButton>\n\n          <Radio.RadioButton  value=\"orange\">orange</Radio.RadioButton>\n\n      </Radio.RadioGroup>\n\n    )\n  }\n};","desc":" `colors`参数控制背景色"}]
 
 
 class Demo extends Component {

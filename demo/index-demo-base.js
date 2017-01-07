@@ -4,7 +4,7 @@ import { Panel } from 'bee-panel';
 import Button from 'bee-button';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import RadioGroup from '../src';
+import Radio from '../src';
 
 
 const CARET = <i className="uf uf-chevronarrowdown"></i>;

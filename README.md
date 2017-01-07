@@ -3,21 +3,20 @@
 [![Build Status](https://img.shields.io/travis/tinper-bee/bee-radio-group/master.svg)](https://travis-ci.org/tinper-bee/bee-radio-group)
 [![Coverage Status](https://coveralls.io/repos/github/tinper-bee/bee-radio-group/badge.svg?branch=master)](https://coveralls.io/github/tinper-bee/bee-radio-group?branch=master)
 
-单选框组合
-
-RadioGroup将Radio集成为自己的子组件。故API需注意。
+单选.
 
 ## 使用
-使用单独的bee-radio-group包
+使用单独的bee-radio包
 #### 组件引入
-先进行下载bee-radio-group包
+先进行下载bee-radio包
 
 ```
-npm install --save bee-radio-group
+npm install --save bee-radio
 ```
 组件调用
 ```js
-import RadioGroup from 'bee-radio-group';
+import Radio from 'bee-radio';
+RadioGroup = Radio.RadioGroup;
 
 const RadioApp = React.createClass({
   getInitialState() {
@@ -35,13 +34,13 @@ const RadioApp = React.createClass({
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange}>
         <label>
-          <RadioGroup.Radio colors="warning" value="apple" >apple</RadioGroup.Radio>
+          <Radio colors="warning" value="apple" >apple</Radio>
         </label>
         <label>
-          <RadioGroup.Radio value="orange" >Orange</RadioGroup.Radio>
+          <Radio value="orange" >Orange</Radio>
         </label>
         <label>
-          <RadioGroup.Radio value="watermelon" >Watermelon</RadioGroup.Radio>
+          <Radio value="watermelon" >Watermelon</Radio>
         </label>
       </RadioGroup>
     );
@@ -54,13 +53,13 @@ React.render(<RadioApp />, document.getElementById('target'));
 #### 样式引入
 - 可以使用link引入dist目录下bee-radio.css
 ```
-<link rel="stylesheet" href="./node_modules/build/bee-radio-group.css">
+<link rel="stylesheet" href="./node_modules/build/bee-radio.css">
 ```
 - 可以在js中import样式
 ```js
-import "./node_modules/src/RadioGroup.scss"
+import "./node_modules/src/Radio.scss"
 //或是
-import "./node_modules/build/bee-radio-group.css"
+import "./node_modules/build/bee-radio.css"
 ```
 
 
@@ -71,6 +70,14 @@ import "./node_modules/build/bee-radio-group.css"
 |参数|说明|类型|默认值|
 |---|----|---|------|
 |color|one of: `primary` `success` `info` `error`  `warning` `dark`|string|''|
+|disabled|是否可用|bool|false|
+
+## RadioButton
+
+|参数|说明|类型|默认值|
+|:---|:----|:---|:------|
+|color|one of: `primary` `success` `info` `error`  `warning` `dark`|string|-|
+|size|one of: `lg` `sm`|string|-|
 |disabled|是否可用|bool|false|
 
 ## RadioGroup

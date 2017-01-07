@@ -1,12 +1,12 @@
 /**
- * @title Radio
+ * @title RadioButton
  * @description `colors`参数控制背景色
  */
-class Demo1 extends Component{
+class Demo2 extends Component{
   constructor(props) {
   	super(props);
   	this.state = {
-    	selectedValue: 'apple'
+    	selectedValue: 'banana'
     };
   }
   handleChange(value) {
@@ -14,18 +14,21 @@ class Demo1 extends Component{
   }
   render() {
     return (
+
       <Radio.RadioGroup
         name="fruit"
+        size="lg"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange.bind(this)}>
 
-          <Radio value="apple" >apple</Radio>
+          <Radio.RadioButton value="apple">apple</Radio.RadioButton>
 
-          <Radio value="orange" >Orange</Radio>
+          <Radio.RadioButton value="banana">banana</Radio.RadioButton>
 
-          <Radio disabled value="watermelon" >Watermelon</Radio>
+          <Radio.RadioButton  value="orange">orange</Radio.RadioButton>
 
       </Radio.RadioGroup>
+
     )
   }
 };
