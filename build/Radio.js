@@ -32,13 +32,16 @@ var propTypes = {
     */
   colors: _react2["default"].PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger', 'primary']),
   /**
+    * radio 大小
+    */
+  size: _react2["default"].PropTypes.oneOf(['lg', 'sm']),
+  /**
     * radio 是否可用
     */
   disabled: _react2["default"].PropTypes.bool
 };
 
 var defaultProps = {
-  active: false,
   disabled: false,
   clsPrefix: 'u-radio'
 };
@@ -79,7 +82,8 @@ var Radio = function (_React$Component) {
   Radio.prototype.render = function render() {
     var _context$radioGroup = this.context.radioGroup,
         name = _context$radioGroup.name,
-        selectedValue = _context$radioGroup.selectedValue;
+        selectedValue = _context$radioGroup.selectedValue,
+        size = _context$radioGroup.size;
     /**
      * 自身的属性
      */
@@ -101,12 +105,15 @@ var Radio = function (_React$Component) {
     }
 
     var classes = {
-      'is-checked': optional.checked,
+      'is-checked': optional.checked && !disabled,
       disabled: disabled
     };
 
     if (colors) {
       classes[clsPrefix + '-' + colors] = true;
+    }
+    if (size) {
+      classes[clsPrefix + '-' + size] = true;
     }
     var classNames = (0, _classnames2["default"])(clsPrefix, classes);
     var input = _react2["default"].createElement('input', _extends({}, others, {

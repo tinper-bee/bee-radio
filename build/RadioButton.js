@@ -1,0 +1,58 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Radio = require('./Radio');
+
+var _Radio2 = _interopRequireDefault(_Radio);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+
+var propTypes = {
+  value: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
+  style: _react.PropTypes.object
+};
+var defaultProps = {
+  clsPrefix: "u-radio-button"
+};
+
+var RadioButton = function (_Component) {
+  _inherits(RadioButton, _Component);
+
+  function RadioButton() {
+    _classCallCheck(this, RadioButton);
+
+    return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+  }
+
+  RadioButton.prototype.render = function render() {
+    var _props = this.props,
+        clsPrefic = _props.clsPrefic,
+        onthers = _objectWithoutProperties(_props, ['clsPrefic']);
+
+    return _react2["default"].createElement(_Radio2["default"], this.props);
+  };
+
+  return RadioButton;
+}(_react.Component);
+
+RadioButton.propTypes = propTypes;
+RadioButton.defaultProps = defaultProps;
+exports["default"] = RadioButton;
+module.exports = exports['default'];

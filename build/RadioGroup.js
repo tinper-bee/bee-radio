@@ -12,10 +12,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _Radio = require('./Radio');
-
-var _Radio2 = _interopRequireDefault(_Radio);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -38,6 +34,10 @@ var propTypes = {
   * 暴露给用户，且与子Radio通信的方法
   */
   onChange: _react.PropTypes.func,
+  /**
+    * radio 大小
+    */
+  size: _react2["default"].PropTypes.oneOf(['lg', 'sm']),
 
   children: _react.PropTypes.node.isRequired,
 
@@ -72,11 +72,12 @@ var RadioGroup = function (_React$Component) {
     var _props = this.props,
         name = _props.name,
         selectedValue = _props.selectedValue,
-        onChange = _props.onChange;
+        onChange = _props.onChange,
+        size = _props.size;
 
     return {
       radioGroup: {
-        name: name, selectedValue: selectedValue, onChange: onChange
+        name: name, selectedValue: selectedValue, onChange: onChange, size: size
       }
     };
   };
@@ -88,7 +89,8 @@ var RadioGroup = function (_React$Component) {
         selectedValue = _props2.selectedValue,
         onChange = _props2.onChange,
         children = _props2.children,
-        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children']);
+        size = _props2.size,
+        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children', 'size']);
 
     return _react2["default"].createElement(
       Component,
@@ -103,6 +105,5 @@ var RadioGroup = function (_React$Component) {
 RadioGroup.childContextTypes = childContextTypes;
 RadioGroup.propTypes = propTypes;
 RadioGroup.defaultProps = defaultProps;
-RadioGroup.Radio = _Radio2["default"];
 exports["default"] = RadioGroup;
 module.exports = exports['default'];

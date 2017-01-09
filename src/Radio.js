@@ -17,7 +17,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  active: false,
   disabled: false,
   clsPrefix: 'u-radio'
 };
