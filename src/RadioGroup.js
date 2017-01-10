@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 const propTypes = {
   name: PropTypes.string,
@@ -30,7 +30,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  Component: 'div'
+  Component: 'div',
+  clsPrefix: 'u-radio-group'
 };
 
 /**
@@ -62,9 +63,9 @@ class RadioGroup extends React.Component {
   }
 
   render () {
-    const {Component, name, selectedValue, onChange, children,size, ...others} = this.props;
-    
-    return <Component {...others}>{children}</Component>;
+    const {Component, name, selectedValue, onChange, children,size, clsPrefix, className, ...others} = this.props;
+
+    return <Component className={classnames(clsPrefix,className)} {...others}>{children}</Component>;
   }
 }
 

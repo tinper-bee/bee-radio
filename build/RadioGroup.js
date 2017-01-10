@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -45,7 +47,8 @@ var propTypes = {
 };
 
 var defaultProps = {
-  Component: 'div'
+  Component: 'div',
+  clsPrefix: 'u-radio-group'
 };
 
 /**
@@ -90,11 +93,13 @@ var RadioGroup = function (_React$Component) {
         onChange = _props2.onChange,
         children = _props2.children,
         size = _props2.size,
-        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children', 'size']);
+        clsPrefix = _props2.clsPrefix,
+        className = _props2.className,
+        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children', 'size', 'clsPrefix', 'className']);
 
     return _react2["default"].createElement(
       Component,
-      others,
+      _extends({ className: (0, _classnames2["default"])(clsPrefix, className) }, others),
       children
     );
   };

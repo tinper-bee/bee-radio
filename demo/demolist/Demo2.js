@@ -14,10 +14,8 @@ class Demo2 extends Component{
   }
   render() {
     return (
-
       <Radio.RadioGroup
         name="fruit"
-        size="lg"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange.bind(this)}>
 
