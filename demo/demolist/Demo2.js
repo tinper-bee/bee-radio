@@ -26,6 +26,7 @@ class Demo2 extends Component{
           <Radio.RadioButton  value="orange">orange</Radio.RadioButton>
 
       </Radio.RadioGroup>
+     
 
     )
   }
