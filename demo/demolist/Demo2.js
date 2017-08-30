@@ -2,6 +2,12 @@
  * @title RadioButton
  * @description `colors`参数控制背景色
  */
+
+import React, { Component } from 'react'
+import Radio from '../../src'
+
+const  RadioGroup = Radio.RadioGroup;
+
 class Demo2 extends Component{
   constructor(props) {
   	super(props);
@@ -31,3 +37,5 @@ class Demo2 extends Component{
     )
   }
 };
+
+export default Demo2;

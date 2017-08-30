@@ -12,69 +12,7 @@ const CARET = <i className="uf uf-arrow-down"></i>;
 const CARETUP = <i className="uf uf-arrow-up"></i>;
 
 
-/**
- * @title Radio
- * @description `colors`参数控制背景色
- */
-class Demo1 extends Component{
-  constructor(props) {
-  	super(props);
-  	this.state = {
-    	selectedValue: 'apple'
-    };
-  }
-  handleChange(value) {
-    this.setState({selectedValue: value});
-  }
-  render() {
-    return (
-      <Radio.RadioGroup
-        name="fruit"
-        selectedValue={this.state.selectedValue}
-        onChange={this.handleChange.bind(this)}>
-
-          <Radio value="apple" >apple</Radio>
-
-          <Radio value="orange" >Orange</Radio>
-
-          <Radio disabled value="watermelon" >Watermelon</Radio>
-
-      </Radio.RadioGroup>
-    )
-  }
-};/**
- * @title RadioButton
- * @description `colors`参数控制背景色
- */
-class Demo2 extends Component{
-  constructor(props) {
-  	super(props);
-  	this.state = {
-    	selectedValue: 'banana'
-    };
-  }
-  handleChange(value) {
-    this.setState({selectedValue: value});
-  }
-  render() {
-    return (
-      <Radio.RadioGroup
-        name="fruit"
-        selectedValue={this.state.selectedValue}
-        onChange={this.handleChange.bind(this)}>
-
-          <Radio.RadioButton value="apple">apple</Radio.RadioButton>
-
-          <Radio.RadioButton value="banana">banana</Radio.RadioButton>
-
-          <Radio.RadioButton  value="orange">orange</Radio.RadioButton>
-
-      </Radio.RadioGroup>
-     
-
-    )
-  }
-};var DemoArray = [{"example":<Demo1 />,"title":" Radio","code":"/**\n * @title Radio\n * @description `colors`参数控制背景色\n */\nclass Demo1 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'apple'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio value=\"apple\" >apple</Radio>\n\n          <Radio value=\"orange\" >Orange</Radio>\n\n          <Radio disabled value=\"watermelon\" >Watermelon</Radio>\n\n      </Radio.RadioGroup>\n    )\n  }\n};","desc":" `colors`参数控制背景色"},{"example":<Demo2 />,"title":" RadioButton","code":"/**\n * @title RadioButton\n * @description `colors`参数控制背景色\n */\nclass Demo2 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'banana'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio.RadioButton value=\"apple\">apple</Radio.RadioButton>\n\n          <Radio.RadioButton value=\"banana\">banana</Radio.RadioButton>\n\n          <Radio.RadioButton  value=\"orange\">orange</Radio.RadioButton>\n\n      </Radio.RadioGroup>\n     \n\n    )\n  }\n};","desc":" `colors`参数控制背景色"}]
+var Demo1 = require("./demolist/Demo1");var Demo2 = require("./demolist/Demo2");var DemoArray = [{"example":<Demo1 />,"title":" Radio","code":"/**\n * @title Radio\n * @description `colors`参数控制背景色\n */\n\nimport React, { Component } from 'react'\nimport Radio from 'tinper-bee'\n\n\n\nclass Demo1 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'apple'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio value=\"apple\" >apple</Radio>\n\n          <Radio value=\"orange\" >Orange</Radio>\n\n          <Radio disabled value=\"watermelon\" >Watermelon</Radio>\n\n      </Radio.RadioGroup>\n    )\n  }\n};\n\n","desc":" `colors`参数控制背景色"},{"example":<Demo2 />,"title":" RadioButton","code":"/**\n * @title RadioButton\n * @description `colors`参数控制背景色\n */\n\nimport React, { Component } from 'react'\nimport Radio from 'tinper-bee'\n\nconst  RadioGroup = Radio.RadioGroup;\n\nclass Demo2 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'banana'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio.RadioButton value=\"apple\">apple</Radio.RadioButton>\n\n          <Radio.RadioButton value=\"banana\">banana</Radio.RadioButton>\n\n          <Radio.RadioButton  value=\"orange\">orange</Radio.RadioButton>\n\n      </Radio.RadioGroup>\n     \n\n    )\n  }\n};\n\n","desc":" `colors`参数控制背景色"}]
 
 
 class Demo extends Component {
