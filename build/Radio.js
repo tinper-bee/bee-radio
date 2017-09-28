@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -30,15 +34,15 @@ var propTypes = {
   /**
     * radio 颜色 样式
     */
-  colors: _react2["default"].PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger', 'primary']),
+  colors: _propTypes2["default"].oneOf(['', 'dark', 'success', 'info', 'warning', 'danger', 'primary']),
   /**
     * radio 大小
     */
-  size: _react2["default"].PropTypes.oneOf(['lg', 'sm']),
+  size: _propTypes2["default"].oneOf(['lg', 'sm']),
   /**
     * radio 是否可用
     */
-  disabled: _react2["default"].PropTypes.bool
+  disabled: _propTypes2["default"].bool
 };
 
 var defaultProps = {
@@ -50,7 +54,7 @@ var defaultProps = {
  * 建立与RadioGroup通信
  */
 var contextTypes = {
-  radioGroup: _react2["default"].PropTypes.object
+  radioGroup: _propTypes2["default"].object
 };
 
 var Radio = function (_React$Component) {

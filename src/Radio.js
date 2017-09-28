@@ -1,19 +1,21 @@
 import classnames from 'classnames';
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const propTypes = {
   /**
     * radio 颜色 样式
     */
-  colors: React.PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger','primary']),
+  colors: PropTypes.oneOf(['', 'dark', 'success', 'info', 'warning', 'danger','primary']),
   /**
     * radio 大小
     */
-  size: React.PropTypes.oneOf(['lg','sm']),
+  size: PropTypes.oneOf(['lg','sm']),
   /**
     * radio 是否可用
     */
-  disabled: React.PropTypes.bool
+  disabled: PropTypes.bool
 };
 
 const defaultProps = {
@@ -25,7 +27,7 @@ const defaultProps = {
  * 建立与RadioGroup通信
  */
 const contextTypes = {
-    radioGroup: React.PropTypes.object
+    radioGroup: PropTypes.object
 }
 
 

@@ -1,5 +1,7 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+
 
 const propTypes = {
   name: PropTypes.string,
@@ -18,14 +20,14 @@ const propTypes = {
   /**
     * radio 大小
     */
-  size: React.PropTypes.oneOf(['lg','sm']),
+  size: PropTypes.oneOf(['lg','sm']),
 
   children: PropTypes.node.isRequired,
 
   Component: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
-    PropTypes.object,
+    PropTypes.object
   ])
 };
 
@@ -38,7 +40,7 @@ const defaultProps = {
  * 与子Radio通信
  */
 const childContextTypes = {
-  radioGroup: React.PropTypes.object
+  radioGroup: PropTypes.object
 }
 
 class RadioGroup extends React.Component {

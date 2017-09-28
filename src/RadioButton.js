@@ -1,5 +1,7 @@
-import React,{PropTypes,Component} from 'react';
+import React,{Component} from 'react';
 import Radio from './Radio';
+import PropTypes from 'prop-types';
+
 
 const propTypes = {
   value:  PropTypes.oneOfType([
