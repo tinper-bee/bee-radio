@@ -1,22 +1,23 @@
 {
  "name": "bee-radio",
- "version": "1.0.0",
- "description": "radio-group ui component for react",
+ "version": "1.0.1",
+ "description": "radio ui component for react",
  "keywords": [
   "react",
   "react-component",
   "react-radio-group",
   "iuap-design",
   "neoui-react",
-  "radio-group"
+  "radio-group",
+  "bee-radio"
  ],
  "engines": {
   "node": ">=4.0.0"
  },
- "homepage": "https://github.com/tinper-bee/radio-group",
+ "homepage": "https://github.com/tinper-bee/bee-radio",
  "author": "",
- "repository": "http://github.com/tinper-bee/radio-group",
- "bugs": "https://github.com/tinper-bee/radio-group/issues",
+ "repository": "http://github.com/tinper-bee/bee-radio",
+ "bugs": "https://github.com/tinper-bee/bee-radio/issues",
  "license": "MIT",
  "main": "./build/index",
  "config": {

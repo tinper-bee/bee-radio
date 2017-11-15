@@ -1,7 +1,7 @@
-# bee-radio-group
-[![npm version](https://img.shields.io/npm/v/bee-radio-group.svg)](https://www.npmjs.com/package/bee-radio-group)
-[![Build Status](https://img.shields.io/travis/tinper-bee/bee-radio-group/master.svg)](https://travis-ci.org/tinper-bee/bee-radio-group)
-[![Coverage Status](https://coveralls.io/repos/github/tinper-bee/bee-radio-group/badge.svg?branch=master)](https://coveralls.io/github/tinper-bee/bee-radio-group?branch=master)
+# bee-radio
+[![npm version](https://img.shields.io/npm/v/bee-radio.svg)](https://www.npmjs.com/package/bee-radio)
+[![Build Status](https://img.shields.io/travis/tinper-bee/bee-radio/master.svg)](https://travis-ci.org/tinper-bee/bee-radio)
+[![Coverage Status](https://coveralls.io/repos/github/tinper-bee/bee-radio/badge.svg?branch=master)](https://coveralls.io/github/tinper-bee/bee-radio?branch=master)
 
 单选.
 
@@ -92,7 +92,7 @@ import "./node_modules/build/bee-radio.css"
 #### 开发调试
 
 ```sh
-$ git clone https://github.com/tinper-bee/bee-radio-group
+$ git clone https://github.com/tinper-bee/bee-radio
 $ cd bee-radio-group
 $ npm install
 $ npm run dev
