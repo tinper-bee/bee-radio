@@ -17,7 +17,6 @@ const defaultProps = {
 class RadioButton extends Component{
 
   render() {
-    const {clsPrefic, ...onthers} = this.props;
     return (
       <Radio {...this.props} />
     );
