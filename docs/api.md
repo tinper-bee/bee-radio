@@ -11,15 +11,15 @@
 
 |参数|说明|类型|默认值|
 |:---|:----|:---|:------|
-|color|one of: `primary` `success` `info` `error`  `warning` `dark`|string|-|
+|color|one of: primary/success/info/error/warning/dark|string|-|
 |disabled|是否可用|bool|false|
 
 ## RadioButton
 
 |参数|说明|类型|默认值|
 |:---|:----|:---|:------|
-|color|one of: `primary` `success` `info` `error`  `warning` `dark`|string|-|
-|size|one of: `lg` `sm`|string|-|
+|color|one of: primary/success/info/error/warning/dark|string|-|
+|size|one of: lg/sm|string|-|
 |disabled|是否可用|bool|false|
 
 ## RadioGroup
