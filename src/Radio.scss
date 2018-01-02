@@ -119,7 +119,7 @@
 		}
 		.u-radio-label:after {
 			position: absolute;
-		    top: 9px;
+		    top: 8px;
 		    border-radius: 4px;
 		    height: $radio-icon-checked-height;
 		    width: $radio-icon-checked-width;
@@ -150,7 +150,7 @@
 		    width: $radio-icon-width;
 		    height: $radio-icon-height;
 		    left: 0;
-		    bottom: 0;
+		    bottom: 1px;
 		    text-align: center;
 		    position: absolute;
 		}

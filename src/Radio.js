@@ -63,6 +63,7 @@ class Radio extends React.Component {
           className,
           children,
           clsPrefix,
+          style,
           ...others
         } = this.props;
 
@@ -95,7 +96,7 @@ class Radio extends React.Component {
           />
       );
        return (
-          <label onClick = {this.handleClick} className={classnames(className, classNames)}>
+          <label style={style} onClick = {this.handleClick} className={classnames(className, classNames)}>
             {input}
             <label className={clsPrefix+'-label'}>{children}</label>
           </label>
