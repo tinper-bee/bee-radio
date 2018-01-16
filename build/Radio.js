@@ -98,7 +98,8 @@ var Radio = function (_React$Component) {
         className = _props.className,
         children = _props.children,
         clsPrefix = _props.clsPrefix,
-        others = _objectWithoutProperties(_props, ['disabled', 'colors', 'className', 'children', 'clsPrefix']);
+        style = _props.style,
+        others = _objectWithoutProperties(_props, ['disabled', 'colors', 'className', 'children', 'clsPrefix', 'style']);
 
     var optional = {};
     /**
@@ -127,7 +128,7 @@ var Radio = function (_React$Component) {
     }));
     return _react2["default"].createElement(
       'label',
-      { onClick: this.handleClick, className: (0, _classnames2["default"])(className, classNames) },
+      { style: style, onClick: this.handleClick, className: (0, _classnames2["default"])(className, classNames) },
       input,
       _react2["default"].createElement(
         'label',
