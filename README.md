@@ -65,12 +65,14 @@ import "./node_modules/build/bee-radio.css"
 
 ## API
 
-## RadioGroup.Radio
+## Radio
 
 |参数|说明|类型|默认值|
 |---|----|---|------|
 |color|one of: `primary` `success` `info` `error`  `warning` `dark`|string|''|
 |disabled|是否可用|bool|false|
+| style  | 添加style | object| {} |
+|className|传入列的classname|String	|-|
 
 ## RadioButton
 
