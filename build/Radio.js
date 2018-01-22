@@ -110,7 +110,7 @@ var Radio = function (_React$Component) {
     }
 
     var classes = {
-      'is-checked': optional.checked && !disabled,
+      'is-checked': optional.checked,
       disabled: disabled
     };
 

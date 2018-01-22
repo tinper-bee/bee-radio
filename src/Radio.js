@@ -76,7 +76,7 @@ class Radio extends React.Component {
       }
 
       let classes = {
-        'is-checked':optional.checked && !disabled,   
+        'is-checked':optional.checked,
         disabled
       };
 
