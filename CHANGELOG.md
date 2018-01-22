@@ -1,5 +1,15 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/tinper-bee/bee-radio/compare/v1.0.2...v1.0.3) (2018-01-22)
+
+
+### Bug Fixes
+
+* **bee-radio:** fix: 当radio为disabled时，无法被设置为选中bug ([7985d3d](https://github.com/tinper-bee/bee-radio/commit/7985d3d))
+
+
+
 <a name="1.0.2"></a>
-## 1.0.2 (2018-01-16)
+## [1.0.2](https://github.com/tinper-bee/bee-radio/compare/29dd607...v1.0.2) (2018-01-16)
 
 
 ### Bug Fixes
