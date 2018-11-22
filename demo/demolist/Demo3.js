@@ -1,41 +1,41 @@
 /**
- * @title RadioButton
- * @description `colors`参数控制背景色
+ * @title 竖方向Radio
+ * @description 可以通过style来设置radio样式
  */
 
 import React, { Component } from 'react'
 import Radio from '../../src'
 
-const  RadioGroup = Radio.RadioGroup;
 
-class demo3 extends Component{
+
+class Demo3 extends Component{
   constructor(props) {
   	super(props);
   	this.state = {
-    	selectedValue: 'banana'
+    	selectedValue: 'ig'
     };
   }
   handleChange(value) {
     this.setState({selectedValue: value});
   }
   render() {
+    const radioStyle = {
+      display: 'block'
+    };
     return (
       <Radio.RadioGroup
-        name="fruit"
+        name="team"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange.bind(this)}>
-
-          <Radio.RadioButton value="apple">apple</Radio.RadioButton>
-
-          <Radio.RadioButton value="banana">banana</Radio.RadioButton>
-
-          <Radio.RadioButton  value="orange">orange</Radio.RadioButton>
-
+          <Radio style={radioStyle} value="ig" >IG</Radio>
+          <Radio style={radioStyle} value="edg" >EDG</Radio>
+          <Radio style={radioStyle} value="rng" >RNG</Radio>
+          <Radio style={radioStyle} value="we" >WE</Radio>
+          <Radio style={radioStyle} value="skt" >SKT</Radio>
+          <Radio style={radioStyle} value="ssg" >SSG</Radio>
       </Radio.RadioGroup>
-     
-
     )
   }
 };
 
-export default demo3;
+export default Demo3;

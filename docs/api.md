@@ -11,7 +11,7 @@
 
 |参数|说明|类型|默认值|
 |:---|:----|:---|:------|
-|color|one of: primary/success/info/error/warning/dark|string|-|
+|color|one of: primary/success/info/danger/warning/dark|string|-|
 |disabled|是否可用|bool|false|
 | style  | 添加style | object| {} |
 |className|传入列的classname|String	|-|
@@ -20,7 +20,7 @@
 
 |参数|说明|类型|默认值|
 |:---|:----|:---|:------|
-|color|one of: primary/success/info/error/warning/dark|string|-|
+|color|one of: primary/success/info/danger/warning/dark|string|-|
 |size|one of: lg/sm|string|-|
 |disabled|是否可用|bool|false|
 

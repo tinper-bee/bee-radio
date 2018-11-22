@@ -1,18 +1,18 @@
 /**
- * @title Radio
- * @description 基本用法 
+ * @title RadioButton
+ * @description 
  */
 
 import React, { Component } from 'react'
 import Radio from '../../src'
 
+const  RadioGroup = Radio.RadioGroup;
 
-
-class Demo1 extends Component{
+class Demo4 extends Component{
   constructor(props) {
   	super(props);
   	this.state = {
-    	selectedValue: 'ig'
+    	selectedValue: 'banana'
     };
   }
   handleChange(value) {
@@ -21,18 +21,21 @@ class Demo1 extends Component{
   render() {
     return (
       <Radio.RadioGroup
-        name="lol"
+        name="fruit"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange.bind(this)}>
-          <Radio value="ig" >IG</Radio>
-          <Radio value="edg" >EDG</Radio>
-          <Radio value="rng" >RNG</Radio>
-          <Radio value="we" >WE</Radio>
-          <Radio value="skt" >SKT</Radio>
-          <Radio value="ssg" >SSG</Radio>
+
+          <Radio.RadioButton value="apple">apple</Radio.RadioButton>
+
+          <Radio.RadioButton value="banana">banana</Radio.RadioButton>
+
+          <Radio.RadioButton  value="orange">orange</Radio.RadioButton>
+
       </Radio.RadioGroup>
+     
+
     )
   }
 };
 
-export default Demo1;
+export default Demo4;
