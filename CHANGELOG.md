@@ -1,3 +1,13 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/tinper-bee/bee-radio/compare/v1.0.3...v1.0.4) (2018-11-22)
+
+
+### Features
+
+* **bee-radio:** 全键盘操作 ([ecd2930](https://github.com/tinper-bee/bee-radio/commit/ecd2930))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/tinper-bee/bee-radio/compare/v1.0.2...v1.0.3) (2018-01-22)
 
