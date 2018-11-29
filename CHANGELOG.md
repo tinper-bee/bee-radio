@@ -1,3 +1,13 @@
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/tinper-bee/bee-radio/compare/v1.0.4...v1.0.5) (2018-11-29)
+
+
+### Features
+
+* **bee-checkbox:** tab键radioGroup中选中的radio设置焦点 ([a5134cb](https://github.com/tinper-bee/bee-radio/commit/a5134cb))
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/tinper-bee/bee-radio/compare/v1.0.3...v1.0.4) (2018-11-22)
 
