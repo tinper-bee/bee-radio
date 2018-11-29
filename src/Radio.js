@@ -46,7 +46,6 @@ class Radio extends React.Component {
     if (this.props.disabled) {
       return;
     }
-
     if (onChange) {
       onChange(this.props.value);
     }
@@ -93,6 +92,7 @@ class Radio extends React.Component {
           type="radio"
           name={name}
           disabled={this.props.disabled}
+          tabIndex={optional.checked?0:-1}
           />
       );
        return (

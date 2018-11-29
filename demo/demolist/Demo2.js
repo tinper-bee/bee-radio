@@ -12,7 +12,7 @@ class Demo2 extends Component{
   constructor(props) {
   	super(props);
   	this.state = {
-    	selectedValue: 'ig'
+    	selectedValue: 'rng'
     };
   }
   handleChange(value) {

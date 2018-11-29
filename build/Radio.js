@@ -77,7 +77,6 @@ var Radio = function (_React$Component) {
     if (this.props.disabled) {
       return;
     }
-
     if (onChange) {
       onChange(this.props.value);
     }
@@ -124,7 +123,8 @@ var Radio = function (_React$Component) {
     var input = _react2["default"].createElement('input', _extends({}, others, {
       type: 'radio',
       name: name,
-      disabled: this.props.disabled
+      disabled: this.props.disabled,
+      tabIndex: optional.checked ? 0 : -1
     }));
     return _react2["default"].createElement(
       'label',
