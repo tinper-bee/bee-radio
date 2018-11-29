@@ -1,3 +1,13 @@
+<a name="1.0.6"></a>
+## [1.0.6](https://github.com/tinper-bee/bee-radio/compare/v1.0.5...v1.0.6) (2018-11-29)
+
+
+### Bug Fixes
+
+* **bee-checkbox:** 全键盘获得焦点默认第一个 ([4671c0d](https://github.com/tinper-bee/bee-radio/commit/4671c0d))
+
+
+
 <a name="1.0.5"></a>
 ## [1.0.5](https://github.com/tinper-bee/bee-radio/compare/v1.0.4...v1.0.5) (2018-11-29)
 
