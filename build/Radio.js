@@ -73,7 +73,6 @@ var Radio = function (_React$Component) {
   Radio.prototype.handleClick = function handleClick(event) {
     var onChange = this.context.radioGroup.onChange;
 
-
     if (this.props.disabled) {
       return;
     }
@@ -86,7 +85,8 @@ var Radio = function (_React$Component) {
     var _context$radioGroup = this.context.radioGroup,
         name = _context$radioGroup.name,
         selectedValue = _context$radioGroup.selectedValue,
-        size = _context$radioGroup.size;
+        size = _context$radioGroup.size,
+        focusvalue = _context$radioGroup.focusvalue;
     /**
      * 自身的属性
      */
@@ -120,11 +120,15 @@ var Radio = function (_React$Component) {
       classes[clsPrefix + '-' + size] = true;
     }
     var classNames = (0, _classnames2["default"])(clsPrefix, classes);
+    var tabIndex = optional.checked ? 0 : -1;
+    if (focusvalue && focusvalue == this.props.value) {
+      tabIndex = 0;
+    }
     var input = _react2["default"].createElement('input', _extends({}, others, {
       type: 'radio',
       name: name,
       disabled: this.props.disabled,
-      tabIndex: optional.checked ? 0 : -1
+      tabIndex: tabIndex
     }));
     return _react2["default"].createElement(
       'label',

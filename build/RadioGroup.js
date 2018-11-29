@@ -68,8 +68,25 @@ var RadioGroup = function (_React$Component) {
   function RadioGroup(props, context) {
     _classCallCheck(this, RadioGroup);
 
-    return _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
+
+    _this.state = {
+      focusvalue: ''
+    };
+    return _this;
   }
+
+  RadioGroup.prototype.componentDidMount = function componentDidMount() {
+    var array = [];
+    this.props.children.map(function (item) {
+      array.push(item.props.value);
+    });
+    if (array.indexOf(this.props.selectedValue) == -1) {
+      this.setState({
+        focusvalue: array[0]
+      });
+    }
+  };
 
   /**
     * 一旦外层change方法触发本身props发生改变，则调用getChildContext更新与子Radio的通信信息（radioGroup）
@@ -84,7 +101,7 @@ var RadioGroup = function (_React$Component) {
 
     return {
       radioGroup: {
-        name: name, selectedValue: selectedValue, onChange: onChange, size: size
+        name: name, selectedValue: selectedValue, onChange: onChange, size: size, focusvalue: this.state.focusvalue
       }
     };
   };
@@ -99,11 +116,12 @@ var RadioGroup = function (_React$Component) {
         size = _props2.size,
         clsPrefix = _props2.clsPrefix,
         className = _props2.className,
-        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children', 'size', 'clsPrefix', 'className']);
+        focusvalue = _props2.focusvalue,
+        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children', 'size', 'clsPrefix', 'className', 'focusvalue']);
 
     return _react2["default"].createElement(
       Component,
-      _extends({ className: (0, _classnames2["default"])(clsPrefix, className) }, others),
+      _extends({ className: (0, _classnames2["default"])(clsPrefix, className) }, others, { focusvalue: this.state.focusvalue }),
       children
     );
   };

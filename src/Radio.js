@@ -42,7 +42,6 @@ class Radio extends React.Component {
 
   handleClick(event) {
     const {onChange } = this.context.radioGroup;
-
     if (this.props.disabled) {
       return;
     }
@@ -52,7 +51,7 @@ class Radio extends React.Component {
   }
  
   render() {
-      const {name, selectedValue,size} = this.context.radioGroup;
+      const {name, selectedValue,size,focusvalue} = this.context.radioGroup;
       /**
        * 自身的属性
        */
@@ -86,13 +85,17 @@ class Radio extends React.Component {
           classes[`${clsPrefix}-${size}`] = true;
       }
       let classNames = classnames(clsPrefix,classes);
+      let  tabIndex=optional.checked?0:-1;
+      if(focusvalue&&focusvalue==this.props.value){
+        tabIndex = 0 ;
+      }
       const input = (
           <input
           {...others}
           type="radio"
           name={name}
           disabled={this.props.disabled}
-          tabIndex={optional.checked?0:-1}
+          tabIndex={tabIndex}
           />
       );
        return (

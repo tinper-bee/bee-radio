@@ -47,9 +47,22 @@ class RadioGroup extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    
+    this.state={
+      focusvalue:''
+    }
   }
   
+  componentDidMount(){
+    let array = []
+    this.props.children.map((item)=>{
+        array.push(item.props.value)
+    })
+    if(array.indexOf(this.props.selectedValue)==-1){
+        this.setState({
+          focusvalue:array[0]
+        })
+    }
+  }
   
   /**
     * 一旦外层change方法触发本身props发生改变，则调用getChildContext更新与子Radio的通信信息（radioGroup）
@@ -59,15 +72,15 @@ class RadioGroup extends React.Component {
     const {name, selectedValue, onChange,size} = this.props;
     return {
       radioGroup: {
-        name, selectedValue, onChange,size
+        name, selectedValue, onChange,size,focusvalue:this.state.focusvalue
       }
     }
   }
 
   render () {
-    const {Component, name, selectedValue, onChange, children,size, clsPrefix, className, ...others} = this.props;
+    const {Component, name, selectedValue, onChange, children,size, clsPrefix, className, focusvalue,...others} = this.props;
 
-    return <Component className={classnames(clsPrefix,className)} {...others}>{children}</Component>;
+    return <Component className={classnames(clsPrefix,className)} {...others} focusvalue={this.state.focusvalue}>{children}</Component>;
   }
 }
 
