@@ -88,6 +88,22 @@ var RadioGroup = function (_React$Component) {
     }
   };
 
+  RadioGroup.prototype.componentWillReceiveProps = function componentWillReceiveProps() {
+    var array = [];
+    this.props.children.map(function (item) {
+      array.push(item.props.value);
+    });
+    if (array.indexOf(this.props.selectedValue) == -1) {
+      this.setState({
+        focusvalue: array[0]
+      });
+    } else {
+      this.setState({
+        focusvalue: ''
+      });
+    }
+  };
+
   /**
     * 一旦外层change方法触发本身props发生改变，则调用getChildContext更新与子Radio的通信信息（radioGroup）
     */
