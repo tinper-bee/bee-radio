@@ -1,3 +1,13 @@
+<a name="1.0.7"></a>
+## [1.0.7](https://github.com/tinper-bee/bee-radio/compare/v1.0.6...v1.0.7) (2018-11-30)
+
+
+### Bug Fixes
+
+* **bee-checkbox:** 全键盘操作bug ([0c178b8](https://github.com/tinper-bee/bee-radio/commit/0c178b8))
+
+
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/tinper-bee/bee-radio/compare/v1.0.5...v1.0.6) (2018-11-29)
 
