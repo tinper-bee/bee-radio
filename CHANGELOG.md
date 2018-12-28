@@ -1,3 +1,13 @@
+<a name="1.0.8"></a>
+## [1.0.8](https://github.com/tinper-bee/bee-radio/compare/v1.0.7...v1.0.8) (2018-12-28)
+
+
+### Bug Fixes
+
+* **bee-radio:** children没有的时候加提示 ([96a32f8](https://github.com/tinper-bee/bee-radio/commit/96a32f8))
+
+
+
 <a name="1.0.7"></a>
 ## [1.0.7](https://github.com/tinper-bee/bee-radio/compare/v1.0.6...v1.0.7) (2018-11-30)
 
