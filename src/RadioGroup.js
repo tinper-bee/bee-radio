@@ -52,11 +52,24 @@ class RadioGroup extends React.Component {
     }
   }
   
-  componentDidMount(){
+  getValues = ()=>{
     let array = []
-    this.props.children.map((item)=>{
+    let children = this.props.children;
+    if(!children){
+      console.error('RadioGroup must have child nodes');
+      return array;
+    }
+    if(children.length>1){
+      children.map((item)=>{
         array.push(item.props.value)
-    })
+      })
+    }else{
+      array.push(children.props.value);
+    }
+    return array;
+  }
+  componentDidMount(){
+    let array = this.getValues();
     if(array.indexOf(this.props.selectedValue)==-1){
         this.setState({
           focusvalue:array[0]
@@ -65,10 +78,7 @@ class RadioGroup extends React.Component {
   }
 
   componentWillReceiveProps(){
-    let array = []
-    this.props.children.map((item)=>{
-        array.push(item.props.value)
-    })
+    let array = this.getValues();
     if(array.indexOf(this.props.selectedValue)==-1){
         this.setState({
           focusvalue:array[0]

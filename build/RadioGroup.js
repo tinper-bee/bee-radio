@@ -70,6 +70,23 @@ var RadioGroup = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, _React$Component.call(this, props, context));
 
+    _this.getValues = function () {
+      var array = [];
+      var children = _this.props.children;
+      if (!children) {
+        console.error('RadioGroup must have child nodes');
+        return array;
+      }
+      if (children.length > 1) {
+        children.map(function (item) {
+          array.push(item.props.value);
+        });
+      } else {
+        array.push(children.props.value);
+      }
+      return array;
+    };
+
     _this.state = {
       focusvalue: ''
     };
@@ -77,10 +94,7 @@ var RadioGroup = function (_React$Component) {
   }
 
   RadioGroup.prototype.componentDidMount = function componentDidMount() {
-    var array = [];
-    this.props.children.map(function (item) {
-      array.push(item.props.value);
-    });
+    var array = this.getValues();
     if (array.indexOf(this.props.selectedValue) == -1) {
       this.setState({
         focusvalue: array[0]
@@ -89,10 +103,7 @@ var RadioGroup = function (_React$Component) {
   };
 
   RadioGroup.prototype.componentWillReceiveProps = function componentWillReceiveProps() {
-    var array = [];
-    this.props.children.map(function (item) {
-      array.push(item.props.value);
-    });
+    var array = this.getValues();
     if (array.indexOf(this.props.selectedValue) == -1) {
       this.setState({
         focusvalue: array[0]
