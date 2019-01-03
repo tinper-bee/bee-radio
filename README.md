@@ -91,6 +91,14 @@ import "./node_modules/build/bee-radio.css"
 |name|radio组名|string|''|
 |Children|Radio子组件|obj|''|
 
+## 已支持的键盘操作
+
+|按键|功能|
+|:---|:----|
+|space |选中/反选Radio|
+|→(右箭)、↓(下箭) |将焦点移动到下一个Radio上，依次循环选中|
+|←(左箭)、↑(上箭) |将焦点移动到上一个Radio上，依次循环选中|
+
 #### 开发调试
 
 ```sh
