@@ -31,7 +31,7 @@
 |onChange|暴露在外层的触发radio是否选中的方法|func|-|
 |selectedValue|被选中的radio值|string|-|
 |name|radio组名|string|''|
-|Children|Radio子组件|obj|-|
+|Children|必填，Radio子组件|node|-|
 
 
 ## 已支持的键盘操作
