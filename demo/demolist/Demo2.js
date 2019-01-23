@@ -12,7 +12,7 @@ class Demo2 extends Component{
   constructor(props) {
   	super(props);
   	this.state = {
-    	selectedValue: 'rng'
+    	selectedValue: '3'
     };
   }
   handleChange(value) {
@@ -24,12 +24,12 @@ class Demo2 extends Component{
         name="color"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange.bind(this)}>
-          <Radio colors="primary" value="ig" >IG</Radio>
-          <Radio colors="success" value="edg" >EDG</Radio>
-          <Radio colors="info" value="rng" >RNG</Radio>
-          <Radio colors="warning" value="we" >WE</Radio>
-          <Radio colors="danger" value="skt" >SKT</Radio>
-          <Radio colors="dark" value="ssg" >SSG</Radio>
+          <Radio colors="primary" value="1" >苹果</Radio>
+          <Radio colors="success" value="2" >香蕉</Radio>
+          <Radio colors="info" value="3" >葡萄</Radio>
+          <Radio colors="warning" value="4" >菠萝</Radio>
+          <Radio colors="danger" value="5" >梨</Radio>
+          <Radio colors="dark" value="6" >石榴</Radio>
       </Radio.RadioGroup>
     )
   }

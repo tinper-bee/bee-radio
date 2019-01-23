@@ -12,7 +12,7 @@ class Demo3 extends Component{
   constructor(props) {
   	super(props);
   	this.state = {
-    	selectedValue: 'ig'
+    	selectedValue: '1'
     };
   }
   handleChange(value) {
@@ -27,12 +27,12 @@ class Demo3 extends Component{
         name="team"
         selectedValue={this.state.selectedValue}
         onChange={this.handleChange.bind(this)}>
-          <Radio style={radioStyle} value="ig" >IG</Radio>
-          <Radio style={radioStyle} value="edg" >EDG</Radio>
-          <Radio style={radioStyle} value="rng" >RNG</Radio>
-          <Radio style={radioStyle} value="we" >WE</Radio>
-          <Radio style={radioStyle} value="skt" >SKT</Radio>
-          <Radio style={radioStyle} value="ssg" >SSG</Radio>
+          <Radio style={radioStyle} value="1" >苹果</Radio>
+          <Radio style={radioStyle} value="2" >香蕉</Radio>
+          <Radio style={radioStyle} value="3" >葡萄</Radio>
+          <Radio style={radioStyle} value="4" >菠萝</Radio>
+          <Radio style={radioStyle} value="5" >梨</Radio>
+          <Radio style={radioStyle} value="6" >石榴</Radio>
       </Radio.RadioGroup>
     )
   }

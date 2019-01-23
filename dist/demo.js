@@ -76,7 +76,7 @@
 	
 	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-arrow-up' });
 	
-	var Demo1 = __webpack_require__(84);var Demo2 = __webpack_require__(89);var Demo3 = __webpack_require__(90);var Demo4 = __webpack_require__(91);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " Radio", "code": "/**\n * @title Radio\n * @description 基本用法 \n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\n\n\nclass Demo1 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: '1'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"lol\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n          <Radio value=\"ig\" >IG</Radio>\n          <Radio value=\"edg\" >EDG</Radio>\n          <Radio value=\"rng\" >RNG</Radio>\n          <Radio value=\"we\" >WE</Radio>\n          <Radio value=\"skt\" >SKT</Radio>\n          <Radio value=\"ssg\" >SSG</Radio>\n      </Radio.RadioGroup>\n    )\n  }\n};\n\n", "desc": " 基本用法 " }, { "example": _react2['default'].createElement(Demo2, null), "title": " 不同颜色的radio", "code": "/**\n * @title 不同颜色的radio\n * @description `colors`参数控制背景色\n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\n\n\nclass Demo2 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'rng'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"color\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n          <Radio colors=\"primary\" value=\"ig\" >IG</Radio>\n          <Radio colors=\"success\" value=\"edg\" >EDG</Radio>\n          <Radio colors=\"info\" value=\"rng\" >RNG</Radio>\n          <Radio colors=\"warning\" value=\"we\" >WE</Radio>\n          <Radio colors=\"danger\" value=\"skt\" >SKT</Radio>\n          <Radio colors=\"dark\" value=\"ssg\" >SSG</Radio>\n      </Radio.RadioGroup>\n    )\n  }\n};\n\n", "desc": " `colors`参数控制背景色" }, { "example": _react2['default'].createElement(Demo3, null), "title": " 竖方向Radio", "code": "/**\n * @title 竖方向Radio\n * @description 可以通过style来设置radio样式\n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\n\n\nclass Demo3 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'ig'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    const radioStyle = {\n      display: 'block'\n    };\n    return (\n      <Radio.RadioGroup\n        name=\"team\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n          <Radio style={radioStyle} value=\"ig\" >IG</Radio>\n          <Radio style={radioStyle} value=\"edg\" >EDG</Radio>\n          <Radio style={radioStyle} value=\"rng\" >RNG</Radio>\n          <Radio style={radioStyle} value=\"we\" >WE</Radio>\n          <Radio style={radioStyle} value=\"skt\" >SKT</Radio>\n          <Radio style={radioStyle} value=\"ssg\" >SSG</Radio>\n      </Radio.RadioGroup>\n    )\n  }\n};\n\n", "desc": " 可以通过style来设置radio样式" }, { "example": _react2['default'].createElement(Demo4, null), "title": " RadioButton", "code": "/**\n * @title RadioButton\n * @description \n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\nconst  RadioGroup = Radio.RadioGroup;\n\nclass Demo4 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'banana'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio.RadioButton value=\"apple\">apple</Radio.RadioButton>\n\n          <Radio.RadioButton value=\"banana\">banana</Radio.RadioButton>\n\n          <Radio.RadioButton  value=\"orange\">orange</Radio.RadioButton>\n\n      </Radio.RadioGroup>\n     \n\n    )\n  }\n};\n\n", "desc": " " }];
+	var Demo1 = __webpack_require__(84);var Demo2 = __webpack_require__(89);var Demo3 = __webpack_require__(90);var Demo4 = __webpack_require__(91);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " Radio", "code": "/**\n * @title Radio\n * @description 基本用法 \n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\n\n\nclass Demo1 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: ''\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruits\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n          <Radio value=\"1\" >苹果</Radio>\n          <Radio value=\"2\" >香蕉</Radio>\n          <Radio value=\"3\" >葡萄</Radio>\n          <Radio value=\"4\" >菠萝</Radio>\n          <Radio value=\"5\" >梨</Radio>\n          <Radio value=\"6\" >石榴</Radio>\n      </Radio.RadioGroup>   \n    )\n  }\n};\n\n", "desc": " 基本用法 " }, { "example": _react2['default'].createElement(Demo2, null), "title": " 不同颜色的radio", "code": "/**\n * @title 不同颜色的radio\n * @description `colors`参数控制背景色\n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\n\n\nclass Demo2 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: '3'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"color\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n          <Radio colors=\"primary\" value=\"1\" >苹果</Radio>\n          <Radio colors=\"success\" value=\"2\" >香蕉</Radio>\n          <Radio colors=\"info\" value=\"3\" >葡萄</Radio>\n          <Radio colors=\"warning\" value=\"4\" >菠萝</Radio>\n          <Radio colors=\"danger\" value=\"5\" >梨</Radio>\n          <Radio colors=\"dark\" value=\"6\" >石榴</Radio>\n      </Radio.RadioGroup>\n    )\n  }\n};\n\n", "desc": " `colors`参数控制背景色" }, { "example": _react2['default'].createElement(Demo3, null), "title": " 竖方向Radio", "code": "/**\n * @title 竖方向Radio\n * @description 可以通过style来设置radio样式\n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\n\n\nclass Demo3 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: '1'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    const radioStyle = {\n      display: 'block'\n    };\n    return (\n      <Radio.RadioGroup\n        name=\"team\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n          <Radio style={radioStyle} value=\"1\" >苹果</Radio>\n          <Radio style={radioStyle} value=\"2\" >香蕉</Radio>\n          <Radio style={radioStyle} value=\"3\" >葡萄</Radio>\n          <Radio style={radioStyle} value=\"4\" >菠萝</Radio>\n          <Radio style={radioStyle} value=\"5\" >梨</Radio>\n          <Radio style={radioStyle} value=\"6\" >石榴</Radio>\n      </Radio.RadioGroup>\n    )\n  }\n};\n\n", "desc": " 可以通过style来设置radio样式" }, { "example": _react2['default'].createElement(Demo4, null), "title": " RadioButton", "code": "/**\n * @title RadioButton\n * @description \n */\n\nimport React, { Component } from 'react'\nimport { Radio } from 'tinper-bee';\n\nconst  RadioGroup = Radio.RadioGroup;\n\nclass Demo4 extends Component{\n  constructor(props) {\n  \tsuper(props);\n  \tthis.state = {\n    \tselectedValue: 'banana'\n    };\n  }\n  handleChange(value) {\n    this.setState({selectedValue: value});\n  }\n  render() {\n    return (\n      <Radio.RadioGroup\n        name=\"fruit\"\n        selectedValue={this.state.selectedValue}\n        onChange={this.handleChange.bind(this)}>\n\n          <Radio.RadioButton value=\"apple\">apple</Radio.RadioButton>\n\n          <Radio.RadioButton value=\"banana\">banana</Radio.RadioButton>\n\n          <Radio.RadioButton  value=\"orange\">orange</Radio.RadioButton>\n\n      </Radio.RadioGroup>\n     \n\n    )\n  }\n};\n\n", "desc": " " }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -7963,7 +7963,7 @@
 	    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 	
 	    _this.state = {
-	      selectedValue: '1'
+	      selectedValue: ''
 	    };
 	    return _this;
 	  }
@@ -7976,38 +7976,38 @@
 	    return _react2['default'].createElement(
 	      _src2['default'].RadioGroup,
 	      {
-	        name: 'lol',
+	        name: 'fruits',
 	        selectedValue: this.state.selectedValue,
 	        onChange: this.handleChange.bind(this) },
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { value: 'ig' },
-	        'IG'
+	        { value: '1' },
+	        '\u82F9\u679C'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { value: 'edg' },
-	        'EDG'
+	        { value: '2' },
+	        '\u9999\u8549'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { value: 'rng' },
-	        'RNG'
+	        { value: '3' },
+	        '\u8461\u8404'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { value: 'we' },
-	        'WE'
+	        { value: '4' },
+	        '\u83E0\u841D'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { value: 'skt' },
-	        'SKT'
+	        { value: '5' },
+	        '\u68A8'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { value: 'ssg' },
-	        'SSG'
+	        { value: '6' },
+	        '\u77F3\u69B4'
 	      )
 	    );
 	  };
@@ -8477,7 +8477,7 @@
 	    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 	
 	    _this.state = {
-	      selectedValue: 'rng'
+	      selectedValue: '3'
 	    };
 	    return _this;
 	  }
@@ -8495,33 +8495,33 @@
 	        onChange: this.handleChange.bind(this) },
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { colors: 'primary', value: 'ig' },
-	        'IG'
+	        { colors: 'primary', value: '1' },
+	        '\u82F9\u679C'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { colors: 'success', value: 'edg' },
-	        'EDG'
+	        { colors: 'success', value: '2' },
+	        '\u9999\u8549'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { colors: 'info', value: 'rng' },
-	        'RNG'
+	        { colors: 'info', value: '3' },
+	        '\u8461\u8404'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { colors: 'warning', value: 'we' },
-	        'WE'
+	        { colors: 'warning', value: '4' },
+	        '\u83E0\u841D'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { colors: 'danger', value: 'skt' },
-	        'SKT'
+	        { colors: 'danger', value: '5' },
+	        '\u68A8'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { colors: 'dark', value: 'ssg' },
-	        'SSG'
+	        { colors: 'dark', value: '6' },
+	        '\u77F3\u69B4'
 	      )
 	    );
 	  };
@@ -8574,7 +8574,7 @@
 	    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 	
 	    _this.state = {
-	      selectedValue: 'ig'
+	      selectedValue: '1'
 	    };
 	    return _this;
 	  }
@@ -8595,33 +8595,33 @@
 	        onChange: this.handleChange.bind(this) },
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { style: radioStyle, value: 'ig' },
-	        'IG'
+	        { style: radioStyle, value: '1' },
+	        '\u82F9\u679C'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { style: radioStyle, value: 'edg' },
-	        'EDG'
+	        { style: radioStyle, value: '2' },
+	        '\u9999\u8549'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { style: radioStyle, value: 'rng' },
-	        'RNG'
+	        { style: radioStyle, value: '3' },
+	        '\u8461\u8404'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { style: radioStyle, value: 'we' },
-	        'WE'
+	        { style: radioStyle, value: '4' },
+	        '\u83E0\u841D'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { style: radioStyle, value: 'skt' },
-	        'SKT'
+	        { style: radioStyle, value: '5' },
+	        '\u68A8'
 	      ),
 	      _react2['default'].createElement(
 	        _src2['default'],
-	        { style: radioStyle, value: 'ssg' },
-	        'SSG'
+	        { style: radioStyle, value: '6' },
+	        '\u77F3\u69B4'
 	      )
 	    );
 	  };
