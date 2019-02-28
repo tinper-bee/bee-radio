@@ -35,16 +35,16 @@
 	    user-select: none;
 	    background-image: none;
 	    border: 1px solid transparent;
-	    border-radius: 4px;
+	    border-radius: $border-radius-base;
 	    color: #333;
 	    background-color: #fff;
 	    border-color: #ccc;
 		&:first-child {
 		    margin-left: 0;
-		    border-radius: 4px 0 0 4px;
+		    border-radius: $border-radius-base 0 0 $border-radius-base;
 		}
 		&:last-child{
-    	border-radius: 0 4px 4px 0;
+    	border-radius: 0 $border-radius-base $border-radius-base 0;
 	    }
 	    &.u-radio-button-lg {
 		    height: $radio-button-lg-height;
