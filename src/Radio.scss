@@ -154,6 +154,17 @@ $radio-icon-checked-height: 6px;
 		    background: $radio-checked-color;
 		    margin-left: 5px;
 		}
+		&.u-radio-inverse .u-radio-label{
+			&:before{
+				-moz-box-shadow: inset 0 0 0 10px $radio-checked-color;
+				-webkit-box-shadow: inset 0 0 0 10px $radio-checked-color;
+				box-shadow: inset 0 0 0 10px $radio-checked-color;
+				border-color:$radio-checked-color;
+			}
+			&:after{
+				background: $brand-light;
+			}
+		}
 	} 
 	&.disabled{
 		cursor: not-allowed;
@@ -182,10 +193,10 @@ $radio-icon-checked-height: 6px;
 		    border-radius: 50%;
 		    border: 2px solid $border-color-base;
 		    background-color: #fff;
-		    -moz-transition: all 0.3s ease-in-out;
-		    -o-transition: all 0.3s ease-in-out;
-		    -webkit-transition: all 0.3s ease-in-out;
-		    transition: all 0.3s ease-in-out;
+		    // -moz-transition: all 0.3s ease-in-out;
+		    // -o-transition: all 0.3s ease-in-out;
+		    // -webkit-transition: all 0.3s ease-in-out;
+		    // transition: all 0.3s ease-in-out;
 		    content: '';
 		    font-family: 'uf';
 		    display: inline-block;
