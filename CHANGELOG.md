@@ -1,3 +1,13 @@
+<a name="2.0.8"></a>
+## [2.0.8](https://github.com/tinper-bee/bee-radio/compare/v2.0.7...v2.0.8) (2019-05-24)
+
+
+### Bug Fixes
+
+* **bee-radio:** radiogroup 下只有一个radio的时候报错 ([13dd419](https://github.com/tinper-bee/bee-radio/commit/13dd419))
+
+
+
 <a name="2.0.7"></a>
 ## [2.0.7](https://github.com/tinper-bee/bee-radio/compare/v2.0.6...v2.0.7) (2019-04-11)
 
