@@ -31,6 +31,8 @@ import 'bee-radio/build/Radio.css';
 | style  | 添加style | object| {} |
 |className|传入列的classname|String	|-|
 |inverse|设置选中为红色填充|bool|false|
+|checked|指定当前是否选中|bool|false|
+|defaultChecked|初始是否选中|bool|false|
 
 ### RadioButton
 
