@@ -118,9 +118,11 @@ class RadioGroup extends React.Component {
 
   handleChange = (value) => {
     let { onChange } = this.props;
-    this.setState({
-      selectedValue: value
-    })
+    if(!('selectedValue' in this.props)){
+      this.setState({
+        selectedValue: value
+      })
+    }
     onChange && onChange(value);
   }
 

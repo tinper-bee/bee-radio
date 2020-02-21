@@ -101,9 +101,11 @@ var RadioGroup = function (_React$Component) {
     _this.handleChange = function (value) {
       var onChange = _this.props.onChange;
 
-      _this.setState({
-        selectedValue: value
-      });
+      if (!('selectedValue' in _this.props)) {
+        _this.setState({
+          selectedValue: value
+        });
+      }
       onChange && onChange(value);
     };
 
