@@ -55,7 +55,8 @@ var propTypes = {
 
   children: _propTypes2["default"].node.isRequired,
 
-  Component: _propTypes2["default"].oneOfType([_propTypes2["default"].string, _propTypes2["default"].func, _propTypes2["default"].object])
+  Component: _propTypes2["default"].oneOfType([_propTypes2["default"].string, _propTypes2["default"].func, _propTypes2["default"].object]),
+  disabled: _propTypes2["default"].bool
 };
 
 var defaultProps = {
@@ -173,12 +174,17 @@ var RadioGroup = function (_React$Component) {
         clsPrefix = _props2.clsPrefix,
         className = _props2.className,
         focusvalue = _props2.focusvalue,
-        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children', 'size', 'clsPrefix', 'className', 'focusvalue']);
+        disabled = _props2.disabled,
+        others = _objectWithoutProperties(_props2, ['Component', 'name', 'selectedValue', 'onChange', 'children', 'size', 'clsPrefix', 'className', 'focusvalue', 'disabled']);
 
     return _react2["default"].createElement(
       Component,
       _extends({ className: (0, _classnames2["default"])(clsPrefix, className) }, others, { focusvalue: this.state.focusvalue }),
-      children
+      _react2["default"].Children.map(children, function (child) {
+        return _react2["default"].cloneElement(child, {
+          disabled: child.props.disabled || disabled
+        });
+      })
     );
   };
 

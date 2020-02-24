@@ -44,7 +44,8 @@ const propTypes = {
     PropTypes.string,
     PropTypes.func,
     PropTypes.object
-  ])
+  ]),
+  disabled: PropTypes.bool
 };
 
 const defaultProps = {
@@ -142,9 +143,19 @@ class RadioGroup extends React.Component {
   }
 
   render () {
-    const {Component, name, selectedValue, onChange, children,size, clsPrefix, className, focusvalue,...others} = this.props;
+    const {Component, name, selectedValue, onChange, children,size, clsPrefix, className, focusvalue, disabled, ...others} = this.props;
 
-    return <Component className={classnames(clsPrefix,className)} {...others} focusvalue={this.state.focusvalue}>{children}</Component>;
+    return (
+      <Component className={classnames(clsPrefix,className)} {...others} focusvalue={this.state.focusvalue}>
+        {
+          React.Children.map(children,child=>React.cloneElement(child,
+            {
+              disabled: child.props.disabled || disabled
+            }
+          ))
+        }
+      </Component>
+    );
   }
 }
 

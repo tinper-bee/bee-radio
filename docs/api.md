@@ -44,13 +44,14 @@ import 'bee-radio/build/Radio.css';
 
 ### RadioGroup
 
-|参数|说明|类型|默认值|
-|:---|:----|:---|:------|
+|参数|说明|类型|默认值|版本|
+|:---|:----|:---|:------|:---|
 |onChange|暴露在外层的触发radio是否选中的方法|func|-|
 |defaultValue|默认选中的radio值|string|-|
 |selectedValue|被选中的radio值|string|-|
 |name|radio组名|string|''|
 |Children|必填，Radio子组件|node|-|
+|disabled|禁选所有子单选器|bool|false| 2.1.1
 
 
 ### 已支持的键盘操作
