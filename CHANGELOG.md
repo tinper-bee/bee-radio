@@ -1,3 +1,13 @@
+<a name="2.1.2"></a>
+## [2.1.2](https://github.com/tinper-bee/bee-radio/compare/v2.1.1...v2.1.2) (2020-03-06)
+
+
+### Features
+
+* 增加focus标识 ([4429753](https://github.com/tinper-bee/bee-radio/commit/4429753))
+
+
+
 <a name="2.1.1"></a>
 ## [2.1.1](https://github.com/tinper-bee/bee-radio/compare/v2.1.0...v2.1.1) (2020-02-24)
 
