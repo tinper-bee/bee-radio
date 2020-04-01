@@ -1,3 +1,13 @@
+<a name="2.1.4"></a>
+## [2.1.4](https://github.com/tinper-bee/bee-radio/compare/v2.1.3...v2.1.4) (2020-04-01)
+
+
+### Features
+
+* **bee-radio:** 单个radio 改变checked ([a38a036](https://github.com/tinper-bee/bee-radio/commit/a38a036))
+
+
+
 <a name="2.1.3"></a>
 ## [2.1.3](https://github.com/tinper-bee/bee-radio/compare/v2.1.2...v2.1.3) (2020-04-01)
 
