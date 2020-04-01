@@ -130,7 +130,8 @@ var Radio = function (_React$Component) {
         children = props.children,
         clsPrefix = props.clsPrefix,
         style = props.style,
-        others = _objectWithoutProperties(props, ['inverse', 'disabled', 'colors', 'className', 'children', 'clsPrefix', 'style']);
+        propsChecked = props.checked,
+        others = _objectWithoutProperties(props, ['inverse', 'disabled', 'colors', 'className', 'children', 'clsPrefix', 'style', 'checked']);
 
     var radioGroup = context.radioGroup;
 
@@ -154,6 +155,10 @@ var Radio = function (_React$Component) {
      */
     if (selectedValue !== undefined) {
       optional.checked = this.props.value === selectedValue;
+    }
+    //如果传了checked，以传入的为准
+    if (propsChecked != undefined) {
+      optional.checked = propsChecked;
     }
 
     var classes = (_classes = {}, _defineProperty(_classes, clsPrefix + '-focused', this.state.focused), _defineProperty(_classes, 'is-checked', typeof optional.checked !== 'undefined' ? optional.checked : checked), _defineProperty(_classes, 'disabled', disabled), _classes);

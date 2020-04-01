@@ -92,6 +92,7 @@ class Radio extends React.Component {
           children,
           clsPrefix,
           style,
+          checked:propsChecked,
           ...others
         } = props;
       const { radioGroup } = context;
@@ -111,6 +112,10 @@ class Radio extends React.Component {
        */
       if(selectedValue !== undefined) {
         optional.checked = (this.props.value === selectedValue);
+      }
+      //如果传了checked，以传入的为准
+      if(propsChecked != undefined){
+        optional.checked = propsChecked;
       }
 
       let classes = {
