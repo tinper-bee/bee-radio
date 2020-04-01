@@ -19,7 +19,9 @@ const propTypes = {
   /**
     * radio 样式 是否使用红色填充
     */
-  inverse: PropTypes.bool
+  inverse: PropTypes.bool,
+  checked:PropTypes.bool,
+  onChange:PropTypes.func
 };
 
 const defaultProps = {
@@ -43,22 +45,30 @@ class Radio extends React.Component {
     this.state = {
       checked: initChecked,
       focused: false
+    }    
+  }
+  componentWillReceiveProps(nextProps){
+    if('checked' in nextProps){
+      this.setState({
+        checked:nextProps.checked
+      })
     }
-    this.handleClick = this.handleClick.bind(this);
-    
   }
 
-  handleClick(event) {
+  handleClick=(event)=> {
     if (this.props.disabled) {
       return;
     }
-
     if (this.context.radioGroup && this.context.radioGroup.onChange) {
       this.context.radioGroup.onChange(this.props.value);
     }else {
-      this.setState({
-        checked: true
-      })
+      if (!('checked' in this.props)) {
+        this.setState({
+          checked: !this.state.checked
+        })
+      }
+      event.target.checked = !this.state.checked;
+      this.props.onChange&&this.props.onChange(event,!this.state.checked)
     }
   }
 
@@ -92,7 +102,7 @@ class Radio extends React.Component {
           children,
           clsPrefix,
           style,
-          checked:propsChecked,
+          onChange,
           ...others
         } = props;
       const { radioGroup } = context;
@@ -112,10 +122,6 @@ class Radio extends React.Component {
        */
       if(selectedValue !== undefined) {
         optional.checked = (this.props.value === selectedValue);
-      }
-      //如果传了checked，以传入的为准
-      if(propsChecked != undefined){
-        optional.checked = propsChecked;
       }
 
       let classes = {
